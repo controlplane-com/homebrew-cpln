@@ -1,5 +1,5 @@
 class Cpln < Formula
-  desc "Control Plane CLI test"
+  desc "Control Plane CLI"
   homepage "https://controlplane.com"
   url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/844733757-ba7245dd/cpln-macos.tgz",
       verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/"
