@@ -1,5 +1,5 @@
 class Cpln < Formula
-  desc "Control Plane CLI"
+  desc "Control Plane CLI test"
   homepage "https://controlplane.com"
   url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/844733757-ba7245dd/cpln-macos.tgz",
       verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/"
@@ -26,7 +26,7 @@ class Cpln < Formula
     test_org = "test-org"
     test_gvc = "test-gvc"
 
-    system "#{bin}/cpln", "profile", "create #{test_profile}", "--org #{test_org}", "--gvc #{test_gvc}"
+    system "#{bin}/cpln", "profile", "create", test_profile, "--org", test_org, "--gvc", test_gvc
     assert_match test_profile, shell_output("#{bin}/cpln profile get")
 
     # Set profile as default
