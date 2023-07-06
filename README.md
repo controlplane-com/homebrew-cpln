@@ -1,15 +1,27 @@
 # homebrew-cpln
 
 ## Overview
-Control Plane offers a Command Line Interface (CLI) for all major operating systems. The CLI is an abstraction layer over the Control Plane API and gives you access to all the features of the platform. Read more at [Control Plane documentation](https://docs.controlplane.com/reference/cli).
-
-Visit [Control Plane](https://controlplane.com) to learn more.
+This is the official [Control Plane](https://controlplane.com) Homebrew [Tap](https://docs.brew.sh/Taps).
 
 ## Installation
 
-Run the following commands in your terminal:
+Run the following command to add the tap to your Homebrew taps.
 
-```
+```bash
 brew tap controlplane-com/cpln
+```
+
+To install a package, you need to run the following command:
+
+```bash
+brew install package_name
+```
+
+## Available Packages
+
+```bash
+# Formulae
+
 brew install cpln
+brew install cpln-k8s-cost-analyzer
 ```
