@@ -1,4 +1,4 @@
-# homebrew-cpln
+# Control Plane - Homebrew Tap
 
 ## Overview
 This is the official [Control Plane](https://controlplane.com) Homebrew [Tap](https://docs.brew.sh/Taps).
