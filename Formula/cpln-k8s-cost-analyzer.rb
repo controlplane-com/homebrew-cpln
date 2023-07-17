@@ -1,9 +1,9 @@
 class CplnK8sCostAnalyzer < Formula
   desc "Control Plane K8s Cost Analyzer"
   homepage "https://controlplane.com"
-  url "https://github.com/controlplane-com/k8s-cost-analyzer/archive/refs/tags/v1.0.0.zip"
-  sha256 "6e6e945a7ae108f9b153fd644d29f2b3afa40ea4048010cf07754ca0d08e673b"
-  version "1.0.0"
+  url "https://github.com/controlplane-com/k8s-cost-analyzer/archive/refs/tags/v1.0.2.zip"
+  sha256 "160d6d09c166d437dd0acab1d909d376c910f071605020d937f5e2d5fb7232a7"
+  version "1.0.2"
   license "GPL-3.0-only"
 
   depends_on "python"
@@ -22,6 +22,6 @@ class CplnK8sCostAnalyzer < Formula
 
   test do
     # Run the binary with the "--version" flag
-    assert_match "1.0.0", shell_output("#{bin}/cpln-k8s-cost-analyzer --version")
+    assert_match "1.0.2", shell_output("#{bin}/cpln-k8s-cost-analyzer --version")
   end
 end

@@ -1,4 +1,4 @@
-# homebrew-cpln
+# Control Plane - Homebrew Tap
 
 ## Overview
 This is the official [Control Plane](https://controlplane.com) Homebrew [Tap](https://docs.brew.sh/Taps).
@@ -24,4 +24,10 @@ brew install package_name
 
 brew install cpln
 brew install cpln-k8s-cost-analyzer
+```
+
+## Update
+
+```bash
+brew update && brew upgrade
 ```
