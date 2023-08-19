@@ -2,7 +2,7 @@ class CplnK8sCostAnalyzer < Formula
   desc "Control Plane K8s Cost Analyzer"
   homepage "https://controlplane.com"
   url "https://github.com/controlplane-com/k8s-cost-analyzer/archive/refs/tags/v1.0.5.zip"
-  sha256 "b6dcd2a829ca9724aac4a0f41d285a9cc9a8995f260ae68663839e7c97fd3755"
+  sha256 "11a0e8e622988b4449074fe0ee50d8dc7c81d6c90de1aba35eee310fa94dbb01"
   version "1.0.5"
   license "GPL-3.0-only"
 
