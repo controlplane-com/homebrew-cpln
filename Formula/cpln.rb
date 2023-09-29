@@ -10,7 +10,7 @@ class Cpln < Formula
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
     sha256 "d6e0c66e97925c836e1f54fb6fc50ecbc6c84b5fb3b082d42779101392958cc8"
   end
-  version "1.1.0"
+  version "1.2.4"
   license "GPL-3.0-only"
 
   def install
