@@ -2,13 +2,13 @@ class Cpln < Formula
   desc "Control Plane CLI"
   homepage "https://controlplane.com"
   if OS.mac?
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/binaries/cpln/1479-5f9b0d3/cpln-macos.tgz",
-        verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln"
-    sha256 "5a57da3cbb19000b5369001d51027bf824cfb8d105fa78f82cd70154e6794f77"
+    url "https://storage.googleapis.com/binaries/cpln/binaries/cpln/1051708608-baffad49/cpln-macos.tgz",
+        verified: "https://storage.googleapis.com/binaries/cpln"
+    sha256 "7ee7301147bbf16de65b509fcb6ff6728ae9b030099e50051832d200cc1d3d5a"
   else
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/binaries/cpln/1479-5f9b0d3/cpln-linux.tgz",
-        verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln"
-    sha256 "1d4cfae739ceee389d305659001d0c3172a0f1a5d9691d55cf66fc40e918ed64"
+    url "https://storage.googleapis.com/binaries/cpln/binaries/cpln/1051708608-baffad49/cpln-linux.tgz",
+        verified: "https://storage.googleapis.com/binaries/cpln"
+    sha256 "65daeb2b293238b83b3228a775066795b3d6d2ffec9a5647d18c8055ab2c0d91"
   end
   version "1.3.1"
   license "GPL-3.0-only"
