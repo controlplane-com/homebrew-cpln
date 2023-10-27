@@ -6,7 +6,7 @@ set -e
 # File Paths
 script_dir=$(dirname "$(realpath "$0")")
 template_file_path="$script_dir/../templates/cpln-template.txt"
-cpln_formula_file_path="$script_dir/../Formula/cpln-test.rb"
+cpln_formula_file_path="$script_dir/../Formula/cpln.rb"
 
 # List of environment variables to check
 env_vars=("ARTIFACTS" "TAG" "VERIFIED" "SHA_MACOS" "SHA_LINUX" "VERSION")
