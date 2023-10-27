@@ -3,11 +3,11 @@ class Cpln < Formula
   homepage "https://controlplane.com"
   if OS.mac?
     url "{ARTIFACTS}/binaries/cpln/{TAG}/cpln-macos.tgz",
-        verified: "{ARTIFACTS}"
+        verified: "{VERIFIED}"
     sha256 "{SHA_MACOS}"
   else
     url "{ARTIFACTS}/binaries/cpln/{TAG}/cpln-linux.tgz",
-        verified: "{ARTIFACTS}"
+        verified: "{VERIFIED}"
     sha256 "{SHA_LINUX}"
   end
   version "{VERSION}"
