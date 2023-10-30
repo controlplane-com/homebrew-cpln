@@ -2,11 +2,11 @@ class Cpln < Formula
   desc "Control Plane CLI"
   homepage "https://controlplane.com"
   if OS.mac?
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/binaries/cpln/1055011054-62616b16/cpln-macos.tgz",
+    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1055011054-62616b16/cpln-macos.tgz",
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
     sha256 "e8497188ca7ecab918356fe9beb23b18c2e719b34a8590f50f79f8c83530e48a"
   else
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/binaries/cpln/1055011054-62616b16/cpln-linux.tgz",
+    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1055011054-62616b16/cpln-linux.tgz",
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
     sha256 "a460df759707ccf283bf64c92823f5f149868760ea4b8615428a287ed2d4ea79"
   end
