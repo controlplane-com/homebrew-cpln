@@ -1,23 +1,22 @@
 class CplnK8sCostAnalyzer < Formula
   desc "Control Plane K8s Cost Analyzer"
   homepage "https://controlplane.com"
-  url "https://github.com/controlplane-com/k8s-cost-analyzer/archive/refs/tags/v1.0.5.zip"
-  sha256 "11a0e8e622988b4449074fe0ee50d8dc7c81d6c90de1aba35eee310fa94dbb01"
+  if OS.mac?
+    url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.0.5/k8s-cost-analyzer-macOS"
+    sha256 "4c65492fa59d1451baba4842982c58438b9a51f282f20e9a27010f97d7d94db2"
+  else
+    url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.0.5/k8s-cost-analyzer-linux"
+    sha256 "87af3a9c7919a89e5d16a87f715e02bcef6b34faea0507c8634e001dec3e12d8"
+  end
   version "1.0.5"
   license "GPL-3.0-only"
-
-  depends_on "python"
-  depends_on "pyinstaller"
   
   def install
-    # Install dependencies from requirements.txt
-    system "pip", "install", "-r", "requirements.txt"
-
-    # Build the binary using PyInstaller
-    system "pyinstaller", "--onefile", "main.py", "--name", "cpln-k8s-cost-analyzer"
-
-    # Install generated binary
-    bin.install "dist/cpln-k8s-cost-analyzer"
+    if OS.mac?
+      bin.install "k8s-cost-analyzer-macOS" => "cpln-k8s-cost-analyzer"
+    else
+      bin.install "k8s-cost-analyzer-linux" => "cpln-k8s-cost-analyzer"
+    end
   end
 
   test do
