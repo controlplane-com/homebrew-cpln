@@ -2,15 +2,15 @@ class Cpln < Formula
   desc "Control Plane CLI"
   homepage "https://controlplane.com"
   if OS.mac?
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1217840798-de56847e/cpln-macos.tgz",
+    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1218065750-294976d5/cpln-macos.tgz",
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
-    sha256 "3e62fbdaa1a03c5e3468e3cc079211426d9def1e34086d514896f507709b1163"
+    sha256 "bad6cc6ab620d0858c9910b056e2bb4d58cc8e2ab9581df6bdac42f27351423e"
   else
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1217840798-de56847e/cpln-linux.tgz",
+    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1218065750-294976d5/cpln-linux.tgz",
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
-    sha256 "0e08aae11e1d832a879b5c9329d6604c180f0e9762b587b0dec989521725e090"
+    sha256 "fcd70ad2e3bee240c30fff474a6f33079a155114db92ec5845b5396b9da4cbc6"
   end
-  version "2.0.0"
+  version "2.0.1"
   license "GPL-3.0-only"
 
   def install
@@ -22,7 +22,7 @@ class Cpln < Formula
 
   test do
     # Run the CLI binary with the "--version" flag
-    assert_match "2.0.0", shell_output("#{bin}/cpln --version")
+    assert_match "2.0.1", shell_output("#{bin}/cpln --version")
 
     # Run the CLI binary with the "--help" flag
     assert_match "Control Plane Corporation", shell_output("#{bin}/cpln --help")
