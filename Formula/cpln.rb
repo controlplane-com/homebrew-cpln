@@ -2,11 +2,6 @@ class Cpln < Formula
   desc "Control Plane CLI"
   homepage "https://controlplane.com"
   if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1265759630-357e26d5/cpln-macos-arm64.tgz",
-          verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
-      sha256 "e30d7994fba5b3df99677a76002121db8ff42c2bf1c3529843da7f6e5211a74d"
-    else
       url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1265759630-357e26d5/cpln-macos.tgz",
           verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
       sha256 "b1b1971cbb9962fdcad000b3b17b524eb1ca4242ede42287f6f2a18c8c50b7f6"
