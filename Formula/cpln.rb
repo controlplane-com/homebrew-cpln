@@ -5,7 +5,6 @@ class Cpln < Formula
       url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1265759630-357e26d5/cpln-macos.tgz",
           verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
       sha256 "b1b1971cbb9962fdcad000b3b17b524eb1ca4242ede42287f6f2a18c8c50b7f6"
-    end
   else
     url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1265759630-357e26d5/cpln-linux.tgz",
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
