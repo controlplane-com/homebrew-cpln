@@ -2,15 +2,9 @@ class Cpln < Formula
   desc "Control Plane CLI"
   homepage "https://controlplane.com"
   if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1292227631-3efbcff0/cpln-macos-arm64.tgz",
-          verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
-      sha256 "6d900666580f4c76e98162c0cf71385849227bce5ac506419adabd0b7c1b1638"
-    else
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1292227631-3efbcff0/cpln-macos.tgz",
-          verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
-      sha256 "bcb6a4b3bf993a42604a09ec412fe144f4e0cdbea2ec3e8ed5240258785aafc0"
-    end
+    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1292227631-3efbcff0/cpln-macos.tgz",
+        verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
+    sha256 "bcb6a4b3bf993a42604a09ec412fe144f4e0cdbea2ec3e8ed5240258785aafc0"
   else
     url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1292227631-3efbcff0/cpln-linux.tgz",
         verified: "https://storage.googleapis.com/artifacts.cpln-build.appspot.com"
