@@ -9,7 +9,7 @@ template_file_path="$script_dir/../templates/cpln-template.txt"
 cpln_formula_file_path="$script_dir/../Formula/cpln.rb"
 
 # List of environment variables to check
-env_vars=("URL" "VERIFIED" "SHA_MACOS" "SHA_MACOS_ARM64" "SHA_LINUX" "VERSION")
+env_vars=("URL" "VERIFIED" "SHA_MACOS_x64" "SHA_MACOS_ARM64" "SHA_LINUX" "VERSION")
 
 # Check each environment variable and add it to the replacements associative array
 for env_var in "${env_vars[@]}"; do
