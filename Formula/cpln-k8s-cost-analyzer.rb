@@ -3,17 +3,17 @@ class CplnK8sCostAnalyzer < Formula
   homepage "https://controlplane.com"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.0/k8s-cost-analyzer-macOS-arm64"
-      sha256 "c257dab8256ac84fc8c2e8de07a0a8f3943226fab9d98cea1f3e61ef031a8a88"
+      url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.1/k8s-cost-analyzer-macOS-arm64"
+      sha256 "fd2d44b92a408514e6f67d12d95ef7039a44537b9906409e08733f1b8fdaf746"
     else
-      url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.0/k8s-cost-analyzer-macOS-x64",
-      sha256 "eb0ecac6caf8034aa63dc2e821898a896619d373b903b463ec72c4f0235a83e3"
+      url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.1/k8s-cost-analyzer-macOS-x64",
+      sha256 "4f483f6da4c9f4439d3772bbe33592ec41fda4cc53897f5ee38ed95bef417cbe"
     end
   else
-    url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.0/k8s-cost-analyzer-linux"
-    sha256 "87af3a9c7919a89e5d16a87f715e02bcef6b34faea0507c8634e001dec3e12d8"
+    url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.1/k8s-cost-analyzer-linux"
+    sha256 "ec5d4421573a752b15f80d7faa4f38073c5e42174f082cfa7d734b3c0d2e274b"
   end
-  version "1.1.0"
+  version "1.1.1"
   license "GPL-3.0-only"
   
   def install
@@ -30,6 +30,6 @@ class CplnK8sCostAnalyzer < Formula
 
   test do
     # Run the binary with the "--version" flag
-    assert_match "1.1.0", shell_output("#{bin}/cpln-k8s-cost-analyzer --version")
+    assert_match "1.1.1", shell_output("#{bin}/cpln-k8s-cost-analyzer --version")
   end
 end
