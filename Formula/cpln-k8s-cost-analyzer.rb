@@ -6,7 +6,7 @@ class CplnK8sCostAnalyzer < Formula
       url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.1/k8s-cost-analyzer-macOS-arm64"
       sha256 "fd2d44b92a408514e6f67d12d95ef7039a44537b9906409e08733f1b8fdaf746"
     else
-      url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.1/k8s-cost-analyzer-macOS-x64",
+      url "https://github.com/controlplane-com/k8s-cost-analyzer/releases/download/v1.1.1/k8s-cost-analyzer-macOS-x64"
       sha256 "4f483f6da4c9f4439d3772bbe33592ec41fda4cc53897f5ee38ed95bef417cbe"
     end
   else
