@@ -5,11 +5,11 @@ class Cpln < Formula
     if Hardware::CPU.arm?
       url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1801013340-8dfda1b2/cpln-macos-arm64.dmg",
           verified: "storage.googleapis.com"
-      sha256 "7f99d3d1880e2485e0faff785840de45e41012f72eb91ae3cd07abac95fcd0e2"
+      sha256 "40c80f1cb3714a0b7be5fbe923fe9772dfab89c82222f9b6d3200344903793ae"
     else
       url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1801013340-8dfda1b2/cpln-macos-x64.dmg",
           verified: "storage.googleapis.com"
-      sha256 "cb16087bca59e1bd120d9d94b44104617cf7ef8ea6b94da39861a71a3f83681e"
+      sha256 "9d58af69a840745aa317d798235419270d26ded0d4b73ed579131ae058a0ef8a"
     end
   else
     url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/1801013340-8dfda1b2/cpln-linux.tgz",
