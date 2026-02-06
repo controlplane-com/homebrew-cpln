@@ -3,20 +3,20 @@ class Cpln < Formula
   homepage "https://controlplane.com"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2267695279-891d592b/cpln-macos-arm64.dmg",
+      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2310819839-998d9349/cpln-macos-arm64.dmg",
           verified: "storage.googleapis.com"
-      sha256 "026079ae8706392aaa11e928480836e2ce4675225a6896f38950f2776dbdfd3c"
+      sha256 "e060717aa1984489e52dba11fd37979442896b59ba6885f9a7b04ec043c3c8a8"
     else
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2267695279-891d592b/cpln-macos-x64.dmg",
+      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2310819839-998d9349/cpln-macos-x64.dmg",
           verified: "storage.googleapis.com"
-      sha256 "12c7415803ba8eca38dcffd612ad4271423743b07bdceeaf546848361cb5adbb"
+      sha256 "b410486d532eb0ed6564b98d016f506c498e5e2259389f32ebaef930864c6bcb"
     end
   else
-    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2267695279-891d592b/cpln-linux.tgz",
+    url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2310819839-998d9349/cpln-linux.tgz",
         verified: "storage.googleapis.com"
-    sha256 "fadc084925779cbe017b781fa4acf2d02a80d0fc5a22b2ec6b3c7d7e304b8b1d"
+    sha256 "abcc1abcc6728f86c754bc0e91d473ed196c251ef6e2394a6a887266b7f890ad"
   end
-  version "3.8.2"
+  version "3.9.0"
   license "GPL-3.0-only"
 
   def install
@@ -51,7 +51,7 @@ class Cpln < Formula
 
   test do
     # Run the CLI binary with the "--version" flag
-    assert_match "3.8.2", shell_output("#{bin}/cpln --version")
+    assert_match "3.9.0", shell_output("#{bin}/cpln --version")
 
     # Run the CLI binary with the "--help" flag
     assert_match "Control Plane Corporation", shell_output("#{bin}/cpln --help")
