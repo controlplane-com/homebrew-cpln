@@ -3,11 +3,11 @@ class Cpln < Formula
   homepage "https://controlplane.com"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "{URL}/cpln-macos-arm64.dmg",
+      url "{URL}/cpln-macos-arm64.tgz",
           verified: "{VERIFIED}"
       sha256 "{SHA_MACOS_ARM64}"
     else
-      url "{URL}/cpln-macos-x64.dmg",
+      url "{URL}/cpln-macos-x64.tgz",
           verified: "{VERIFIED}"
       sha256 "{SHA_MACOS_x64}"
     end
@@ -20,30 +20,8 @@ class Cpln < Formula
   license "GPL-3.0-only"
 
   def install
-    if OS.mac?
-      dmg_mountpoint = "#{buildpath}/dmg"
-      staging_dir = "#{buildpath}/staging"
-
-      # Create a directory to stage the files
-      mkdir staging_dir
-
-      # Mount the DMG file
-      system "hdiutil", "attach", cached_download, "-mountpoint", dmg_mountpoint
-      
-      # Copy the files from the DMG to the staging directory
-      cp "#{dmg_mountpoint}/cpln", staging_dir
-      cp "#{dmg_mountpoint}/docker-credential-cpln", staging_dir
-
-      # Unmount the DMG file
-      system "hdiutil", "detach", dmg_mountpoint
-
-      # Install the files from the staging directory
-      bin.install "#{staging_dir}/cpln"
-      bin.install "#{staging_dir}/docker-credential-cpln"
-    else
-      bin.install "cpln"
-      bin.install "docker-credential-cpln"
-    end
+    bin.install "cpln"
+    bin.install "docker-credential-cpln"
 
     # `docker-credential-cpln` is a tool required by the CLI allowing Docker
     # to authenticate to your org's private image registry in Control Plane.
