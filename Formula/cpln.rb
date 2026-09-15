@@ -3,13 +3,13 @@ class Cpln < Formula
   homepage "https://controlplane.com"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2847639947-3237df0e/cpln-macos-arm64.dmg",
+      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2847639947-3237df0e/cpln-macos-arm64.tgz",
           verified: "storage.googleapis.com"
-      sha256 "8520f8a68e97814fafaaee59e5480f4b88c271d078a0bf78410d4b309217c081"
+      sha256 "64b38c47d2ce455afc665985724cbd678f82b8bb1cdb254d3f477bc113e0afae"
     else
-      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2847639947-3237df0e/cpln-macos-x64.dmg",
+      url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2847639947-3237df0e/cpln-macos-x64.tgz",
           verified: "storage.googleapis.com"
-      sha256 "54c9be6b9c71240eb4ac4b4cfb7ef38833cdbc5550fd06859d7227fd8aa1e57e"
+      sha256 "564e42c6f36cd7b381991561981d3e340eb0521d34a49a6712e880cb9661a6e0"
     end
   else
     url "https://storage.googleapis.com/artifacts.cpln-build.appspot.com/binaries/cpln/2847639947-3237df0e/cpln-linux.tgz",
@@ -20,30 +20,8 @@ class Cpln < Formula
   license "GPL-3.0-only"
 
   def install
-    if OS.mac?
-      dmg_mountpoint = "#{buildpath}/dmg"
-      staging_dir = "#{buildpath}/staging"
-
-      # Create a directory to stage the files
-      mkdir staging_dir
-
-      # Mount the DMG file
-      system "hdiutil", "attach", cached_download, "-mountpoint", dmg_mountpoint
-      
-      # Copy the files from the DMG to the staging directory
-      cp "#{dmg_mountpoint}/cpln", staging_dir
-      cp "#{dmg_mountpoint}/docker-credential-cpln", staging_dir
-
-      # Unmount the DMG file
-      system "hdiutil", "detach", dmg_mountpoint
-
-      # Install the files from the staging directory
-      bin.install "#{staging_dir}/cpln"
-      bin.install "#{staging_dir}/docker-credential-cpln"
-    else
-      bin.install "cpln"
-      bin.install "docker-credential-cpln"
-    end
+    bin.install "cpln"
+    bin.install "docker-credential-cpln"
 
     # `docker-credential-cpln` is a tool required by the CLI allowing Docker
     # to authenticate to your org's private image registry in Control Plane.
